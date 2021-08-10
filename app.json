@@ -1,0 +1,86 @@
+{
+  "name": "Adonismusic",
+  "logo": "https://telegra.ph/file/03f1c9ec4513c3a52bc22.jpg",
+  "description": "Bu bot Gruplanizda Rahatlikla Muzik dinlemeniz icin yapildi Sahibi Bodrumlu düzenleyen çorumlu.",
+  "keywords": ["music", "voicechat", "telegram"],
+  "repository": " https://github.com/19samet/bodrumadon-s",
+  "stack": "heroku-20",
+  "buildpacks": [
+   {
+     "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+   },
+   {
+     "url": "heroku/python"
+   }   
+  ],        
+  "env": {
+    "SESSION_NAME": {
+      "description": "string sessionunuzu buraya girin ",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "bot olusturup tokenı buraya girin  @BotFather",
+      "required": true
+    },
+    "BOT_USERNAME": {
+      "description": "botun kullanıcı adını gırın @ olmadan",
+      "required": true
+    },
+    "BOT_NAME": {
+      "description": "BOTUNUN ISMINI GIRIN.",
+      "required": false,
+      "value": ""
+    },
+    "SUPPORT_GROUP": {
+      "description": "bURAYA SUPPORT GRUBUNUZU GİRİN]",
+      "required": false,
+      "value": "LoungeMusicsupport"
+    },
+    "PROJECT_NAME": {
+      "description": "pROJE ISMINIZI GIRIN.",
+      "required": false,
+      "value": "LoungeMusic v1"
+    },
+    "ASSISTANT_NAME": {
+      "description": "Asistanınızın Kullanıcı adını gırın @ sız.",
+      "required": true
+    },
+    "ARQ_API_KEY": {
+      "description": "burdan alın @ARQRobot.",
+      "required": false,
+      "value": ""
+    },    
+    "BG_IMAGE": {
+      "description": "BG image of bot (Use transparent one) [IGNORE].",
+      "required": false,
+      "value": " https://telegra.ph/file/03f1c9ec4513c3a52bc22.jpg"
+    },     
+    "UPDATES_CHANNEL": {
+      "description": "Güncelleme kanalını secin].",
+      "required": false,
+      "value": "Loungeupdates"
+    },    
+    "API_ID": {
+      "description": "Api ıd nızı burdan alın my.telegram.org/apps",
+      "required": true
+    },
+    "PMPERMIT": {
+      "description": "Change to turn off",
+      "required": false,
+      "value": "ENABLE"
+    },    
+    "API_HASH": {
+      "description": "App hash burdan alın my.telegram.org/apps",
+      "required": true
+    },
+    "SUDO_USERS": {
+      "description": "Burdan yetkili secin (separated by space).",
+      "required": true
+    },
+    "DURATION_LIMIT": {
+      "description": "Max audio duration limit for downloads (minutes).",
+      "required": true,
+      "value": "10"
+    }
+  }
+}
